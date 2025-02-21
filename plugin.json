@@ -1,47 +1,28 @@
 {
-  "name": "plugin-sample",
-  "author": "Vanessa",
-  "url": "https://github.com/siyuan-note/plugin-sample",
-  "version": "0.3.8",
+  "name": "siyuan-halo-plugin",
+  "author": "NBBNBB",
+  "url": "https://github.com/syc0000000/siyuan_halo_plugin",
+  "version": "0.0.1",
   "minAppVersion": "3.1.11",
   "backends": [
-    "windows",
-    "linux",
-    "darwin",
-    "ios",
-    "android",
-    "harmony",
-    "docker"
+    "all"
   ],
   "frontends": [
-    "desktop",
-    "mobile",
-    "browser-desktop",
-    "browser-mobile",
-    "desktop-window"
+    "all"
   ],
   "displayName": {
-    "default": "Plugin Sample",
-    "zh_CN": "插件示例"
+    "default": "Halo Support",
+    "zh_CN": "Halo支持"
   },
   "description": {
-    "default": "This is a plugin sample",
-    "zh_CN": "这是一个插件示例"
+    "default": "Halo support for Siyuan",
+    "zh_CN": "为思源笔记提供halo发布支持，包括 文章、Moment、Photos 等"
   },
   "readme": {
     "default": "README.md",
     "zh_CN": "README_zh_CN.md"
   },
-  "funding": {
-    "openCollective": "",
-    "patreon": "",
-    "github": "",
-    "custom": [
-      "https://ld246.com/sponsor"
-    ]
-  },
   "keywords": [
-    "sample",
-    "示例"
+    "halo"
   ]
 }
