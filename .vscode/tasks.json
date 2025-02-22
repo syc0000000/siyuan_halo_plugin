@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build and copy",
+            "type": "shell",
+            "command": "pnpm run build && rm -rf '/mnt/c/Users/28699/SiYuan/data/plugins/siyuan_halo_plugin' && cp -r dist '/mnt/c/Users/28699/SiYuan/data/plugins/siyuan_halo_plugin'",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
