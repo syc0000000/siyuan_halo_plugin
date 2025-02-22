@@ -3,7 +3,6 @@ import "./index.scss";
 import { Plugin, Menu } from "siyuan";
 
 export default class Main extends Plugin {
-    private menu: Menu;
     onload() {
         console.log("Hello World!");
         this.init();
@@ -19,29 +18,25 @@ export default class Main extends Plugin {
                     font-size="24" y="122.08925" x="74.794" fill="currentColor">H</text>
             </symbol>
         `);
+        // 添加按钮
+        this.addTopBar({
+            icon: "icon-halo",
+            title: "Halo",
+            callback: this.openMenu,
+            position: "right",
+        });
+    }
+
+    private openMenu(event: MouseEvent) {
         // 创建菜单
-        this.menu = new Menu("HaloMainMenu");
-        this.menu.addItem({
+        const menu = new Menu("HaloMainMenu");
+        menu.addItem({
             icon: "icon-halo",
             label: "同步 Moment",
             click: () => {
                 console.log("Halo");
             },
         });
-        // 添加按钮
-        this.addTopBar({
-            icon: "icon-halo",
-            title: "Halo",
-            callback: (event: MouseEvent) => {
-                console.log("TopBar Clicked");
-                if (this.menu.isOpen) {
-                    this.menu.close();
-                    this.menu.open({x:event.clientX, y:event.clientY});
-                } else {
-                    this.menu.open({x:event.clientX, y:event.clientY});
-                }
-            },
-            position: "right",
-        });
+        menu.open({x:event.clientX, y:event.clientY});
     }
 }
